@@ -1,0 +1,22 @@
+public class FizzBuzz {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 50; i++) {
+            // Verificar se o numero e divisivel por 3 e 5 //
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FizzBuzz");
+            }
+            // Verificar se o numero i divisivel por 3
+            else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            }
+            // Verificar se o numero e divisivel por 5
+            else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            }
+            // Se nao for divisivel por nenhum, apenas imprimir o numero
+            else {
+                System.out.println(i);
+            }
+        }
+    }
+}
