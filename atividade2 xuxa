@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class MusicaPatinhos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o numero inicial de patinhos: ");
+        int numeroPatinhos = scanner.nextInt();
+
+        for (int i = numeroPatinhos; i > 0; i--) {
+            // Primeira parte da musica
+            System.out.println(i + " patinhos foram passear");
+            System.out.println("Alem das montanhas");
+            System.out.println("Para brincar");
+            System.out.println("A mamae gritou: Qua, qua, qu, qua");
+            if (i > 1) {
+                System.out.println("Mas so " + (i - 1) + " patinhos voltaram de la");
+            } else {
+                // Ultima parte da musica
+                System.out.println("A mamae patinha foi procurar");
+                System.out.println("Alem das montanhas");
+                System.out.println("Na beira do mar");
+                System.out.println("A mamae gritou: Qua, qua, qua, qua");
+                System.out.println("E os " + numeroPatinhos + " patinhos voltaram de la");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
