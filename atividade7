@@ -1,0 +1,48 @@
+public class Produto {
+    // Atributos privados
+    private int codigo;
+    private String descricao;
+    private double preco;
+    private int quantidadeEmEstoque;
+
+    // Construtor
+    public Produto(int codigo, String descricao, double preco, int quantidadeEmEstoque) {
+        this.codigo = codigo;
+        this.descricao = descricao;
+        this.preco = preco;
+        this.quantidadeEmEstoque = quantidadeEmEstoque;
+    }
+
+    // Métodos de acesso (getters)
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public int getQuantidadeEmEstoque() {
+        return quantidadeEmEstoque;
+    }
+
+    // Método para adicionar quantidade ao estoque do produto
+    public void adicionarEstoque(int quantidade) {
+        quantidadeEmEstoque += quantidade;
+        System.out.println(quantidade + " unidades adicionadas ao estoque do produto " + descricao + ".");
+    }
+
+    // Método para remover quantidade do estoque do produto
+    public void removerEstoque(int quantidade) {
+        if (quantidadeEmEstoque >= quantidade) {
+            quantidadeEmEstoque -= quantidade;
+            System.out.println(quantidade + " unidades removidas do estoque do produto " + descricao + ".");
+        } else {
+            System.out.println("Estoque insuficiente para remover " + quantidade + " unidades do produto " + descricao + ".");
+        }
+    }
+}
